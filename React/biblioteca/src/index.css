@@ -1,0 +1,34 @@
+body {
+  font-family: sans-serif;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+.questionPanel {
+  background-color: rgb(186, 209, 157);
+  padding: 50px;
+}
+
+.m5 {
+  margin: 50px;
+}
+
+.classeLivro {
+  margin: 15px;
+  padding: 50px;
+  background-color: bisque;
+}
+
+.resultPanel {
+  background-color: beige;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.submitBtn {
+  margin: 15px;
+  float: right;
+}
