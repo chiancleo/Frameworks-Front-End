@@ -1,11 +1,1 @@
-<h1>{ statement }</h1>
-<h2>{ autor }</h2>
-<h4>{ header }</h4>
-<p>{ descricao }</p>
-
-<script>
-  let header = "Descrição";
-  export let statement;
-  export let autor;
-  export let descricao;
-</script>
+https://uploads.codesandbox.io/uploads/user/b3fcaf39-a085-4a07-8121-ddef328ba4b5/r9BQ-Livro.svelte

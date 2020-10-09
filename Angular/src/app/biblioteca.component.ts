@@ -2,14 +2,16 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: "biblioteca",
-  template: ` <livro
+  template: `<div class="livroPanel">
+    <livro
       [statement]="livros[current].statement"
       [autor]="livros[current].autor"
       [descricao]="livros[current].descricao"
     >
     </livro>
-    <button (click)="next()">Anterior</button>
-    <button (click)="next()">Próximo</button>`
+    <button class="submitBtn" (click)="next()">Próximo</button>
+    <button class="submitBtn" (click)="prev()">Anterior</button>
+  </div>`
 })
 export class BibliotecaComponent {
   livros = [
@@ -47,6 +49,15 @@ export class BibliotecaComponent {
   next() {
     if (this.current < this.livros.length - 1) {
       this.current++;
+    } else {
+      this.current = 0;
+    }
+  }
+  prev() {
+    if (this.current !== 0) {
+      this.current--;
+    } else {
+      this.current = this.livros.length - 1;
     }
   }
 }

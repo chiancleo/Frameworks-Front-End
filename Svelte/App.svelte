@@ -1,10 +1,1 @@
-<script>
-	import Biblioteca from "./Biblioteca.svelte";
-</script>
-
-<style>
-</style>
-
-<main>
-  <Biblioteca />
-</main>
+https://uploads.codesandbox.io/uploads/user/b3fcaf39-a085-4a07-8121-ddef328ba4b5/0ds4-App.svelte
