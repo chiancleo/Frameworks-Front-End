@@ -1,14 +1,56 @@
 body {
   font-family: sans-serif;
+  background-image: url(https://i.pinimg.com/originals/c4/d1/e0/c4d1e083acbdb201927e50b2486283b1.png);
+  opacity: 0.9;
+}
+
+
+Input[type=text]{
+  width: 300px;
 }
 
 .selected {
   font-weight: bold;
 }
 
-.questionPanel {
-  background-color: rgb(186, 209, 157);
-  padding: 50px;
+.principal{
+  font-size: 22px;
+  background-color: #FFFFFF;
+  margin: 450px 150px;
+}
+
+
+
+.container{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  margin-bottom: 30px;
+  
+}
+.category {
+  width: 25%;
+  margin: 30px 1.53333%;
+  border: 5px solid #fff;
+  background: #fff;
+  line-height: 35px;
+  box-shadow: 0 10px 20px #999;
+  display: inline-block;
+}
+
+.imagem {
+  width: 100%;
+  height: 150px;
+  background: black;
+}
+
+.panel {
+  background-color: #C0C0C0;
+  padding: 10px;
+  border: 5px solid #fff;
 }
 
 .m5 {
@@ -16,19 +58,12 @@ body {
 }
 
 .classeLivro {
-  margin: 15px;
-  padding: 50px;
-  background-color: bisque;
+  padding: 15px;
+  position: relative;  
+  background-color: #C0C0C0;  
 }
 
-.resultPanel {
-  background-color: beige;
-  padding: 15px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-}
 
 .submitBtn {
-  margin: 15px;
-  float: right;
+  margin: 5px;
 }

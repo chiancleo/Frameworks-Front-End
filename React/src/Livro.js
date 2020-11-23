@@ -1,11 +1,10 @@
 import React from 'react'
-import viagem from './viagem.png'
 
 export default class Livro extends React.Component {
   render() { 
     return (
       <div>
-        <img src={this.props.imagem} alt="Falha ao carregar" width={100} height={140}/>
+        <img src={this.props.imagem} alt="Falha ao carregar" width={150} height={240}/>
         <h1>Livro: {this.props.statement}</h1>
         <h2>Autor: {this.props.autor}</h2>
         <h4>Descrição:</h4>

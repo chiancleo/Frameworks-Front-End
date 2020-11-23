@@ -2,6 +2,15 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: "app-root",
-  template: "<biblioteca></biblioteca>"
+  template: `
+    <book-form></book-form>
+  `
 })
-export class AppComponent {}
+export class AppComponent {
+  livro = {
+    statement: '',
+    autor: '',
+    descricao:'',
+    imagem:''
+  }
+}
