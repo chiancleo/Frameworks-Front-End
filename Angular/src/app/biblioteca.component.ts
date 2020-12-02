@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: "biblioteca",
-  template: `<div class="livroPanel">
+  template: `<div>
     <livro
       [statement]="livros[current].statement"
       [autor]="livros[current].autor"

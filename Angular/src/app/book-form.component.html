@@ -1,0 +1,13 @@
+<form>
+    <textarea
+      #statement="ngModel"
+      name="statement"
+      [(ngModel)]="livro.statement"
+      required
+    ></textarea>
+    <div class="error" *ngIf="statement.invalid && statement.touched">
+      <div *ngIf="statement.errors.required">
+        O enunciado é obrigatório.
+      </div>
+    </div>
+  </form>

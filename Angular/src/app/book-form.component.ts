@@ -8,38 +8,41 @@ interface LivroType {
 }
 
 @Component({
-  selector: 'book-form',
+  selector: 'livro-form',
   template: `
-    <form #bookForm="ngForm" (ngSubmit)="bookForm.form.valid && onSubmit()">
-      <book-input
+    <form #livroForm="ngForm" (ngSubmit)="livroForm.form.valid && onSubmit()">
+      <livro-input
         type="input"
         label="Título"
         placeholder="Digite o título do livro"
         isRequired="true"
         name="statement"
         [(value)]="book.statement"
-      ></book-input>
-      <book-input
+      ></livro-input>
+      <livro-input
         type="input"
         label="Autor"
-        placeholder="Digite o nome do Autor"
+        placeholder="Digite o nome do autor"
         isRequired="true"
+        name="autor"
         [(value)]="book.autor"
-      ></book-input>
-      <book-input
+      ></livro-input>
+      <livro-input
         type="textarea"
         label="descricao"
-        placeholder="Digite uma breve descricao"
-        isRequired="true"
+        placeholder="Digite uma breve descrição da obra"
+        isRequired="false"
+        name="descricao"
         [(value)]="book.descricao"
-      ></book-input>
-      <book-input
+      ></livro-input>
+      <livro-input
         type="textarea"
         label="Link"
         placeholder="Digite o link para download"
         isRequired="true"
+        name="imagem"
         [(value)]="book.imagem"
-      ></book-input>
+      ></livro-input>
       <input type="submit" value="Cadastrar" />
       <button type="button" (click)="cancel.emit()">Cancelar</button>
     </form>
@@ -64,9 +67,10 @@ export class LivroFormComponent implements OnInit {
   onSubmit() {
     this.update.emit({
       statement: this.book.statement,
-      autor:this.book.autor,
-      descricao:this.book.descricao,
-      imagem:this.book.imagem
+      autor: this.book.autor,
+      descricao: this.book.descricao,
+      imagem: this.book.imagem
     })
   }
 }
+
