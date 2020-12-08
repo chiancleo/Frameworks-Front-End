@@ -10,7 +10,10 @@ import EbookList from './ebooks'
 //import LivroForm from './LivroForm'
 
 import './index.css'
-import category from './imgs/category.jpeg'
+import category_livro from './img/category.jpeg'
+import category_ebook from './img/ebook.png'
+import category_apost from './img/apostila.jpg'
+import banner from './img/banner.jpg'
 
 
 
@@ -18,11 +21,16 @@ export default function App() {
   const data = useBookData()
 
   return (
+
     <div>
+      <header >
+        <img className="banner" src={banner} alt="Falha ao carregar"/>
+      
+      </header>
       <AppContext.Provider value={data}>
         <BrowserRouter>
           <div className="principal">
-            <h1>Biblioteca Virtual</h1>
+            <h1 style={{padding:15}}>Quem Somos</h1>
             <p style={{textIndent:40}}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Praesent sodales felis nec lacinia dapibus. 
@@ -51,19 +59,19 @@ export default function App() {
             </p>
             <div className="container">
               <div className="category">
-                <img className="imagem" src={category} alt="Falha ao carregar" width={150} height={40}/>              
+                <img className="imagem" src={category_livro} alt="Falha ao carregar" width={150} height={40}/>              
                 <Link to="/livros">
                   <h3>Livros</h3>
                 </Link>                            
               </div>
               <div className="category">
-                <img className="imagem" src={category} alt="Falha ao carregar" width={150} height={40}/>
+                <img className="imagem" src={category_ebook} alt="Falha ao carregar" width={150} height={40}/>
                   <Link to="/ebooks">
                     <h3>E-books</h3>
                   </Link>
               </div>
               <div className="category">
-                <img className="imagem" src={category} alt="Falha ao carregar" width={150} height={40}/>
+                <img className="imagem" src={category_apost} alt="Falha ao carregar" width={150} height={40}/>
                 <Link to="/apostilas">
                   <h3>Apostilas</h3>
                 </Link>
@@ -81,10 +89,7 @@ export default function App() {
                 </Route>
                 <Route path="/apostilas">
                   <h1>Apostilas</h1>
-                  <Biblioteca />
-                </Route>
-                <Route path="/edit">
-                  <Biblioteca />
+                  <EbookList />
                 </Route>
               </Switch>
             </div>

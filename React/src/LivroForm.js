@@ -142,8 +142,8 @@ export default function LivroForm(props){
         isRequired={true}
         {...commonProps}
       />
-      <input type="submit" value="Cadastrar" />
-      <button onClick={onCancel}>Cancelar</button>
+      <input className="submitBtn" style={{marginLeft:0}} type="submit" value="Cadastrar" />
+      <button className="submitBtn" style={{marginLeft:0}} onClick={onCancel}>Cancelar</button>
     </form>
   )
 

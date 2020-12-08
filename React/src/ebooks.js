@@ -28,7 +28,7 @@ export default function EbookList(){
         <Switch>
           <Route exact path={path}>
             {livros}  
-            <button onClick={() => history.push(`${url}/add`)}>Adicionar Novo</button>
+            <button className="addBtn" onClick={() => history.push(`${url}/add`)}>Adicionar Novo E-book</button>
           </Route>
           <Route exact path={`${path}/:id`}>
             <LivroForm />

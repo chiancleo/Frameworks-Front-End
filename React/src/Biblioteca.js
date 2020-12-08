@@ -72,8 +72,8 @@ export default function Biblioteca (){
     )
 
     btnAdd = (
-      <button className="submitBtn" onClick={() => history.push(`${url}/add`)}>
-        Adicionar Novo
+      <button className="addBtn" onClick={() => history.push(`${url}/add`)}>
+        Adicionar Novo Livro
       </button>
     )
 
@@ -85,7 +85,7 @@ export default function Biblioteca (){
           {panel}
           {btnPrev}
           {btnNext}
-          {btnAdd}
+          <div>{btnAdd}</div>
         </div>
       </Route>
       <Route exact path={`${path}/:id`}>
