@@ -1,16 +1,51 @@
 <form on:submit|preventDefault={submit}>
-	<h2>Novo Cadastro</h2>
+	<h2>Cadastrar</h2>
 	<Input label="Título" bind:value={book.statement} on:input={touched['statement']=true} on:blur={e=>
-	checkField('statement')} placeholder="Digite o Título do livro" isRequired="true" error={errors['statement']} />
+	checkField('statement')} placeholder="Digite o Título" isRequired="true" error={errors['statement']} />
 	<Input label="Autor" bind:value={book.autor} on:input={e=> touched['autor']=true} on:blur={e =>
 	checkField('autor')} placeholder="Digite o nome do Autor" isRequired="true" error={errors['autor']} />
-	<Input type="textarea" label="Descrição" bind:value={book.descricao} on:input={e=> touched['descricao']=true} on:blur={e =>
-	checkField('descricao')} placeholder="Digite um breve resumo do livro" error={errors['descricao']} />
+	<Input type="textarea" label="Enredo" bind:value={book.descricao} placeholder="Digite um breve resumo do livro" />
 	<Input type="textarea" label="Link" bind:value={book.imagem} on:input={e=> touched['imagem']=true} on:blur={e =>
-	checkField('imagem')} placeholder="Digite o link para download" isRequired="true" />
-	<input type="submit" value="Cadastrar">
-	<button type="button" on:click={e=> dispatch('cancel')}>Cancelar</button>
+	checkField('imagem')} placeholder="Digite o link para download" isRequired="true" error={errors['imagem']} />
+	<input class="submitBtn" type="submit" value="Cadastrar">
+	<button type="button" class="submitBtn" on:click={e=> dispatch('cancel')}>Cancelar</button>
 </form>
+
+<style>
+      .submitBtn {
+        background: #000;
+        background-image: -webkit-linear-gradient(top, #a9a9a9, #808080);
+        background-image: -moz-linear-gradient(top, #a9a9a9, #808080);
+        background-image: -ms-linear-gradient(top, #a9a9a9, #808080);
+        background-image: -o-linear-gradient(top, #a9a9a9, #808080);
+
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 10px;
+        color: #fff;
+        font-family: Open Sans;
+        font-size: 20px;
+        font-weight: 100;
+        padding: 10px;
+        border: solid #808080 1px;
+        text-decoration: none;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 5px;
+        margin-left: 15px;
+        margin-right: 5px;
+        margin-bottom: 25px;
+    }
+    .submitBtn:hover {
+        color: #fff;
+        border: solid #a9a9a9 1px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+</style>
 
 <script>
   import {requiredValidation} from './validations.js'
