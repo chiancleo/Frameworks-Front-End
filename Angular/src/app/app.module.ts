@@ -7,7 +7,9 @@ import { LivroComponent } from "./livro.component";
 import { BibliotecaComponent } from "./biblioteca.component";
 
 import { LivroFormComponent } from './book-form.component';
-import { LivroListComponent } from './book-list.component';
+import { EbookListComponent } from './book-list.component';
+import { ApostilaComponent } from './apostila-list.component';
+
 import { InputComponent } from './input.component';
 
 
@@ -17,7 +19,8 @@ import { InputComponent } from './input.component';
     LivroComponent, 
     BibliotecaComponent,
     LivroFormComponent,
-    LivroListComponent,
+    EbookListComponent,
+    ApostilaComponent,
     InputComponent 
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],

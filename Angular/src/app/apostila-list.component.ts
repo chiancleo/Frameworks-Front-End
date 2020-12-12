@@ -1,8 +1,8 @@
 import { Component } from '@angular/core'
-import { EbookService } from './ebook-list.service'
+import { ApostilaService } from './apostila-list.service'
 
 @Component({
-  selector: 'Ebook-list',
+  selector: 'Apostilas',
   template: `
     <div *ngIf="mode === 'view'">    
       <p class="ebooks" *ngFor="let livro of bookService.livros; index as i">
@@ -23,11 +23,11 @@ import { EbookService } from './ebook-list.service'
     </div>
   `
 })
-export class EbookListComponent {
+export class ApostilaComponent {
   mode = 'view'
-  current = null
+  current = 0;
 
-  constructor(public bookService: EbookService) {}
+  constructor(public bookService: ApostilaService) {}
 
   addLivro() {
     this.mode = 'add'

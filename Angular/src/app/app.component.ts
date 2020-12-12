@@ -3,8 +3,11 @@ import { Component } from "@angular/core";
 @Component({
   selector: "app-root",
   template:`
+    <header >
+    <img class="banner" src="./assets/banner.jpg"alt="Falha ao carregar"/>
+    </header>
     <div class="principal">
-      <h1>Biblioteca Virtual</h1>
+      <h1 style="padding-left: 15px">Quem somos</h1>
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Praesent sodales felis nec lacinia dapibus.
@@ -20,16 +23,16 @@ import { Component } from "@angular/core";
       </p>
       <div class="container">
         <div class="category">
-          <img class="imagem" src="https://miro.medium.com/max/3200/1*722H7nWsDQ0D-ReOKoRytQ.jpeg" alt="Falha ao carregar" />
+          <img class="imagem" src="./assets/category.jpeg" alt="Falha ao carregar" />
           <h3>Livros</h3>
         </div>
         <div class="category">
-        <img class="imagem" src="https://miro.medium.com/max/3200/1*722H7nWsDQ0D-ReOKoRytQ.jpeg" alt="Falha ao carregar" />
+        <img class="imagem" src="./assets/ebook.png" alt="Falha ao carregar" />
           <h3>E-books</h3>
         </div>
         <div class="category">
-        <img class="imagem" src="https://miro.medium.com/max/3200/1*722H7nWsDQ0D-ReOKoRytQ.jpeg" alt="Falha ao carregar"/>
-          <h3>Cadastro</h3>
+        <img class="imagem" src="./assets/apostila.jpg" alt="Falha ao carregar"/>
+          <h3>Apostilas</h3>
         </div>
       </div>
 
@@ -39,11 +42,12 @@ import { Component } from "@angular/core";
         <biblioteca></biblioteca>
         </div>
         <div class="panel">
-          <h1>Cadastro (Em manutenção)</h1>
+          <h1>E-books</h1>
+          <Ebook-list></Ebook-list>
         </div>
         <div class="panel">
-          <h1>E-books</h1>
-          <book-list></book-list>
+          <h1>Apostilas</h1>
+          <Apostilas></Apostilas>
         </div>
       </div>
 

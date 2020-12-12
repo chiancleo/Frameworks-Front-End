@@ -29,9 +29,8 @@ interface LivroType {
       ></livro-input>
       <livro-input
         type="textarea"
-        label="descricao"
+        label="Descrição"
         placeholder="Digite uma breve descrição da obra"
-        isRequired="false"
         name="descricao"
         [(value)]="book.descricao"
       ></livro-input>
@@ -43,8 +42,8 @@ interface LivroType {
         name="imagem"
         [(value)]="book.imagem"
       ></livro-input>
-      <input type="submit" value="Cadastrar" />
-      <button type="button" (click)="cancel.emit()">Cancelar</button>
+      <input class="submitBtn" type="submit" value="Cadastrar" />
+      <button class="submitBtn" type="button" (click)="cancel.emit()">Cancelar</button>
     </form>
   `
 })

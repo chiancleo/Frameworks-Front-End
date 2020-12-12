@@ -1,7 +1,17 @@
 body {
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-image: url(https://i.pinimg.com/originals/c4/d1/e0/c4d1e083acbdb201927e50b2486283b1.png);
-  opacity: 0.9;
+  opacity: 0.95;
+}
+
+
+p{
+  font-size: 20px;
+  text-align: justify;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: serif;
+  text-indent: 40px;
 }
 
 
@@ -9,17 +19,17 @@ Input[type=text]{
   width: 300px;
 }
 
-.selected {
-  font-weight: bold;
+.banner{
+  width: 100%;
+  vertical-align: middle;
+
 }
 
 .principal{
   font-size: 22px;
   background-color: #FFFFFF;
-  margin: 450px 150px;
+  margin: 5px 150px;
 }
-
-
 
 .container{
   display: flex;
@@ -45,26 +55,85 @@ Input[type=text]{
   width: 100%;
   height: 150px;
   background: black;
-  src: "https://miro.medium.com/max/3200/1*722H7nWsDQ0D-ReOKoRytQ.jpeg";
 }
 
 .panel {
   background-color: #C0C0C0;
   padding: 10px;
   border: 5px solid #fff;
+  opacity: 1.0;
 }
 
-.m5 {
-  margin: 50px;
-}
-
-.classeLivro {
-  padding: 15px;
-  position: relative;  
-  background-color: #C0C0C0;  
+.ebooks{
+  text-indent: 0px;
+  text-align: left;
+  padding-left: 0px;
 }
 
 
 .submitBtn {
-  margin: 5px;
+  background: #000;
+  background-image: -webkit-linear-gradient(top, #A9A9A9, #808080);
+  background-image: -moz-linear-gradient(top, #A9A9A9, #808080);
+  background-image: -ms-linear-gradient(top, #A9A9A9, #808080);
+  background-image: -o-linear-gradient(top, #A9A9A9, #808080);
+
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 20px;
+  font-weight: 100;
+  padding: 10px;
+  border: solid #808080 1px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 15px;
+  margin-right: 5px;
+  margin-bottom: 25px;
+}
+
+.addBtn {
+  background: #000;
+  background-image: -webkit-linear-gradient(top, #A9A9A9, #808080);
+  background-image: -moz-linear-gradient(top, #A9A9A9, #808080);
+  background-image: -ms-linear-gradient(top, #A9A9A9, #808080);
+  background-image: -o-linear-gradient(top, #A9A9A9, #808080);
+
+  border-radius: 5px;
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 26px;
+  font-weight: 100;
+  width: 100%;
+  padding: 10px;
+  border: solid #808080 1px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+.submitBtn:hover{
+  color: #FFF;
+  border: solid #A9A9A9 1px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.addBtn:hover{
+  color: #FFF;
+  border: solid #A9A9A9 1px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bolder;
 }
