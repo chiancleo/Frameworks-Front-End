@@ -4,7 +4,7 @@
         <h1>{{statement}}</h1>
         <h2>{{autor}}</h2>
         <h4>Descrição:</h4>
-        <p class="paragrafo">{{descricao}}</p>
+        <p style="text-indent: 40px" >{{descricao}}</p>
     </div>
 </template>
 <script>
@@ -13,10 +13,6 @@ export default {
 }
 </script>
 <style>
-.paragrafo{
-font-family: Arial, Helvetica, sans-serif;
-font-size: 14px;
-}
 .classeLivro {
   padding: 15px;
   position: relative;

@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="onSubmit">
-    <h2>Cadastrar E-books</h2>
+    <h2>Cadastrar</h2>
     <Input
       label="Título"
       v-model="book.statement"
@@ -38,14 +38,14 @@
       @input="touched['imagem'] = true"
       @blur="checkField('imagem')"
     />
-    <input type="submit" value="Cadastrar" />
-    <button @click="$emit('cancel')" type="button">Cancelar</button>
+    <input class="submitBtn" type="submit" value="Cadastrar" />
+    <button class="submitBtn" @click="$emit('cancel')" type="button">Cancelar</button>
   </form>
 </template>
 
 <script>
 import Input from './Input.vue'
-import requiredValidation from './validations'
+import { requiredValidation } from './validations'
 
 const validate = {
   statement: requiredValidation,
@@ -92,8 +92,41 @@ export default {
 </script>
 
 <style scoped>
-.form-item {
-  display: flex;
-  margin-bottom: 1.7rem;
-}
+  .form-item {
+    display: flex;
+    margin-bottom: 1.7rem;
+  }
+  .submitBtn {
+  background: #000;
+  background-image: -webkit-linear-gradient(top, #A9A9A9, #808080);
+  background-image: -moz-linear-gradient(top, #A9A9A9, #808080);
+  background-image: -ms-linear-gradient(top, #A9A9A9, #808080);
+  background-image: -o-linear-gradient(top, #A9A9A9, #808080);
+
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 20px;
+  font-weight: 100;
+  padding: 10px;
+  border: solid #808080 1px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 15px;
+  margin-right: 5px;
+  margin-bottom: 25px;
+  }
+  .submitBtn:hover{
+  color: #FFF;
+  border: solid #A9A9A9 1px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bolder;
+    }
 </style>

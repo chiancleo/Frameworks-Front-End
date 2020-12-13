@@ -1,12 +1,12 @@
 <template>
   <div v-if="mode === 'view'">
-    <p class="ebooks" v-for="(livro, i) in livros" :key="i">
+    <p v-for="(livro, i) in livros" :key="i">
         <b>Título: </b>{{livro.statement}}
         <br />
         <b>Autor: </b>{{livro.autor}}
         <br />
         <b>Link para Download: </b>
-        <a href="{{livro.imagem}}" target="_blank">{{livro.imagem}} </a>
+        <a href= {{livro.imagem}} livro.imagem target="_blank">Baixar {{livro.statement}} </a>
     </p>
     <button class="addBtn" @click="addLivro">Adicionar Novo</button>
   </div>
@@ -102,4 +102,5 @@ export default {
   text-decoration: none;
   font-weight: bolder;
 }
+
 </style>
