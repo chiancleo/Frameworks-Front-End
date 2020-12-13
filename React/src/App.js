@@ -7,7 +7,7 @@ import useBookData from './livros-hook'
 
 import Biblioteca from './Biblioteca'
 import EbookList from './ebooks'
-//import LivroForm from './LivroForm'
+import Apostilas from './apostilas'
 
 import './index.css'
 import category_livro from './img/category.jpeg'
@@ -89,7 +89,7 @@ export default function App() {
                 </Route>
                 <Route path="/apostilas">
                   <h1>Apostilas</h1>
-                  <EbookList />
+                  <Apostilas />
                 </Route>
               </Switch>
             </div>

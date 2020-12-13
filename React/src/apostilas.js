@@ -5,13 +5,13 @@ import AppContext from './AppContext'
 import LivroForm from './LivroForm'
 
 
-export default function EbookList(){
+export default function Apostilas(){
     const {path, url} =useRouteMatch()
     const history = useHistory()
     const ctx = useContext(AppContext)
 
 
-    const ebooks = ctx.ebooks.map((q, i) => (
+    const apostilas = ctx.apostilas.map((q, i) => (
         <p className="ebooks" key={i}>
           <b>Título: </b>
           {q.statement}
@@ -27,8 +27,8 @@ export default function EbookList(){
     return (
         <Switch>
           <Route exact path={path}>
-            {ebooks}  
-            <button className="addBtn" onClick={() => history.push(`${url}/add`)}>Adicionar Novo E-book</button>
+            {apostilas}  
+            <button className="addBtn" onClick={() => history.push(`${url}/add`)}>Adicionar nova Apostila</button>
           </Route>
           <Route exact path={`${path}/:id`}>
             <LivroForm />

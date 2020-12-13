@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { useParams, useHistory } from 'react-router-dom'
+import { useParams, useHistory, useRouteMatch } from 'react-router-dom'
 
 import AppContext from './AppContext'
 
@@ -18,6 +18,8 @@ export default function LivroForm(props){
   const history = useHistory()
   const ctx = useContext(AppContext)
   const{id} = useParams()
+
+  const {path} =useRouteMatch()
 
   let initialData = {
     statement: '',
@@ -84,16 +86,40 @@ export default function LivroForm(props){
     const allTrue = touchedValues.every((t) => t === true)
 
     if (errorsIsEmpty && touchedAll && allTrue) {
-      ctx.updateLivro(
-        {
-          statement: livro.statement,
-          autor: livro.autor,
-          descricao: livro.descricao,
-          imagem: livro.imagem
-        },
-        ctx.livros.length
-      )
-      history.goBack()
+      if(path === '/apostilas/:id'){
+        ctx.updateApostila(
+          {
+            statement: livro.statement,
+            autor: livro.autor,
+            descricao: livro.descricao,
+            imagem: livro.imagem
+          },
+          ctx.apostilas.length
+        )
+        history.goBack()
+      }else if(path === '/ebooks/:id'){
+        ctx.updateEbook(
+          {
+            statement: livro.statement,
+            autor: livro.autor,
+            descricao: livro.descricao,
+            imagem: livro.imagem
+          },
+          ctx.ebooks.length
+        )
+        history.goBack()
+      }else{
+        ctx.updateLivro(
+          {
+            statement: livro.statement,
+            autor: livro.autor,
+            descricao: livro.descricao,
+            imagem: livro.imagem
+          },
+          ctx.livros.length
+        )
+        history.goBack()
+      }
     }
   }
 
